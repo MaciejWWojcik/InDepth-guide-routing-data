@@ -1,0 +1,15 @@
+:host{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  margin: 1rem;
+}

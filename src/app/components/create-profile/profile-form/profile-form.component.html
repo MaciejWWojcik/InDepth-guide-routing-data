@@ -1,0 +1,33 @@
+<h3>Please fill the profile details</h3>
+<form [formGroup]="form">
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput placeholder="Name" formControlName="name">
+  </mat-form-field>
+  <mat-form-field *ngIf="profileType === ProfileType.Person">
+    <mat-label>Surname</mat-label>
+    <input matInput placeholder="Surname" formControlName="surname">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Address</mat-label>
+    <input matInput placeholder="Address" formControlName="address">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Image</mat-label>
+    <input matInput placeholder="Image url" formControlName="image">
+  </mat-form-field>
+  <mat-form-field *ngIf="profileType === ProfileType.Company">
+    <mat-label>CEO</mat-label>
+    <input matInput placeholder="CEO name" formControlName="ceo">
+  </mat-form-field>
+  <mat-form-field *ngIf="profileType === ProfileType.Company">
+    <mat-label>Number of employees</mat-label>
+    <input matInput placeholder="Employees" type="number" formControlName="employees">
+  </mat-form-field>
+  <mat-form-field *ngIf="profileType === ProfileType.Group">
+    <mat-label>Number of members</mat-label>
+    <input matInput placeholder="Members" type="number" formControlName="members">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="submit()">Create Profile</button>
+</form>

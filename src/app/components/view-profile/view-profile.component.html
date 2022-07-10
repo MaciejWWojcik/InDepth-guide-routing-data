@@ -1,0 +1,13 @@
+<mat-card>
+  <mat-card-header>
+    <img mat-card-avatar [src]="profile.image" alt="profile image">
+    <mat-card-title>{{profile.name}} {{profile.surname}}</mat-card-title>
+    <mat-card-subtitle>Profile type: {{profile.type}}</mat-card-subtitle>
+  </mat-card-header>
+  <ng-container *ngIf="fullView">
+    <img mat-card-image [src]="profile.image" alt="profile image">
+    <mat-card-content>
+      <p>{{profile.address}}</p>
+    </mat-card-content>
+  </ng-container>
+</mat-card>

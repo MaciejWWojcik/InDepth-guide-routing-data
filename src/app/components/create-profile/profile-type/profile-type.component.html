@@ -1,0 +1,23 @@
+<h3>Please choose a profile type</h3>
+<section>
+  <a mat-raised-button color="primary" routerLink="../data" [state]="{profileType: ProfileType.Person}">
+    <div class="button-inner">
+      <mat-icon aria-hidden="false" aria-label="Person type icon">person</mat-icon>
+      <span>Person</span>
+    </div>
+  </a>
+
+  <a mat-raised-button color="primary"  routerLink="../data" [state]="{profileType: ProfileType.Group}">
+    <div class="button-inner">
+      <mat-icon aria-hidden="false" aria-label="Person type icon">groups</mat-icon>
+      <span>Group</span>
+    </div>
+  </a>
+
+  <a mat-raised-button color="primary"  routerLink="../data" [state]="{profileType: ProfileType.Company}">
+    <div class="button-inner">
+      <mat-icon aria-hidden="false" aria-label="Person type icon">work</mat-icon>
+      <span>Company</span>
+    </div>
+  </a>
+</section>
