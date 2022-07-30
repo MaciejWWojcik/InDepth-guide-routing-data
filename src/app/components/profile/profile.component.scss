@@ -1,0 +1,25 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+mat-card {
+  width: 400px;
+  margin: 40px 0;
+
+  .background {
+    height: 400px;
+  }
+}
+
+section {
+  display: flex;
+
+  a {
+    margin: 8px;
+  }
+}
+

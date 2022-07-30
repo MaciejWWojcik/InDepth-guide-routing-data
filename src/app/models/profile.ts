@@ -12,6 +12,7 @@ export interface Profile {
 }
 
 export interface Person extends Profile {
+  id: number;
   surname: string;
 }
 

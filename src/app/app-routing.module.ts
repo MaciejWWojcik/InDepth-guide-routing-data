@@ -5,6 +5,7 @@ import { CreateProfileComponent } from './components/create-profile/create-profi
 import { ProfileTypeComponent } from './components/create-profile/profile-type/profile-type.component';
 import { ProfileFormComponent } from './components/create-profile/profile-form/profile-form.component';
 import { HomeComponent } from './components/home/home.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
       { path: 'data', component: ProfileFormComponent },
     ]
   },
+  { path: 'profile/:id', component: ProfileComponent },
 ];
 
 @NgModule({

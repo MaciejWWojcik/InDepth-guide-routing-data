@@ -1,0 +1,30 @@
+<ng-container *ngIf="lastVisited$ | async as lastVisited">
+  <p>
+    Previous profile: {{lastVisited.name}} {{lastVisited.surname}}
+  </p>
+  <a [routerLink]="['/profile', lastVisited.id]"
+     [queryParams]="{lastVisited: lastVisited.id}">
+    Navigate to the previous profile
+  </a>
+</ng-container>
+
+<ng-container *ngIf="profile">
+  <mat-card>
+    <mat-card-header>
+      <img mat-card-avatar [src]="profile.image" alt="profile image">
+      <mat-card-title>{{profile.name}} {{profile.surname}}</mat-card-title>
+      <mat-card-subtitle>Profile type: {{profile.type}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="profile.image" alt="profile image" class="background">
+    <mat-card-content>
+      <p>{{profile.address}}</p>
+    </mat-card-content>
+  </mat-card>
+
+  <h3>Other profiles:</h3>
+  <section>
+    <a mat-raised-button color="primary" routerLink="/profile/1" [queryParams]="{lastVisited: profile.id}">Profile A</a>
+    <a mat-raised-button color="primary" routerLink="/profile/2" [queryParams]="{lastVisited: profile.id}">Profile B</a>
+    <a mat-raised-button color="primary" routerLink="/profile/3" [queryParams]="{lastVisited: profile.id}">Profile C</a>
+  </section>
+</ng-container>
